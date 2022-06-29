@@ -3104,7 +3104,7 @@ docker push "${IMAGE_TAG_PROMETHEUS_SERVICE}"
       kubectl create secret generic regcred -n petclinic-qa \
         --from-file=.dockerconfigjson=/home/ubuntu/.docker/config.json \
         --type=kubernetes.io/dockerconfigjson
-      AWS_REGION=$AWS_REGION helm repo add stable-petclinic s3://petclinic-helm-charts-<put-your-name>/stable/myapp/
+      AWS_REGION=$AWS_REGION helm repo add stable-petclinic s3://petclinic-helm-chartshrn/stable/myapp/
       AWS_REGION=$AWS_REGION helm repo update
       AWS_REGION=$AWS_REGION helm upgrade --install \
         petclinic-app-release stable-petclinic/petclinic_chart --version ${BUILD_NUMBER} \
@@ -3190,7 +3190,6 @@ git checkout release
 git merge dev
 git push origin release
 ```
-
 ## MSP 22 - Prepare a QA Pipeline
 
 - Create `feature/msp-22` branch from `dev`.
