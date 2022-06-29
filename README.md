@@ -3190,7 +3190,6 @@ git checkout release
 git merge dev
 git push origin release
 ```
-## ###### Burada kaldık
 ## MSP 22 - Prepare a QA Pipeline
 
 - Create `feature/msp-22` branch from `dev`.
