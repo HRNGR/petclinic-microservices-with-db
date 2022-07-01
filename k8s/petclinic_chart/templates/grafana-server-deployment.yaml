@@ -31,7 +31,6 @@ spec:
           ports:
             - containerPort: 3000
           resources: {}
-      # for all other microservices except config-server, discovery-server and mysql-server
       initContainers:
       - name: init-discovery-server
         image: busybox
